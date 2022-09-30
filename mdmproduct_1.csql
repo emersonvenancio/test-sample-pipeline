@@ -14,7 +14,7 @@ WITH product AS (
             CAST(NULL AS STRING) AS mdmaddress2,
             CAST(NULL AS STRING) AS mdmaddress3,
             CAST(NULL AS STRING) AS mdmzipcode,
-            'Itajai' AS mdmcity,
+            'Braço do Norte' AS mdmcity,
             'SC' AS mdmstate,
             '' AS mdmcountry
         )  as mdmaddress,
