@@ -14,8 +14,8 @@ WITH product AS (
             CAST(NULL AS STRING) AS mdmaddress2,
             CAST(NULL AS STRING) AS mdmaddress3,
             CAST(NULL AS STRING) AS mdmzipcode,
-            'Braço do Norte' AS mdmcity,
-            'SC' AS mdmstate,
+            'São Paulo' AS mdmcity,
+            'SP' AS mdmstate,
             '' AS mdmcountry
         )  as mdmaddress,
         '{"lat":-34.83759307861328,"lon":-7.068934440612793}' AS homeplace
