@@ -8,17 +8,31 @@ WITH product AS (
         true AS __resolveGeolocation,
         category AS mdmcategoryname,
         (SELECT AS STRUCT CAST(variations.quantity AS INT64) AS mdmquantity, variations.name AS mdmname) AS mdmvariations,
-       (SELECT AS STRUCT
-            'default' AS mdmaddresstype,
-            '{"lat":-34.83759307861328,"lon":-7.068934440612793}' AS mdmcoordinates,
-            CAST(NULL AS STRING) AS mdmaddress1,
-            CAST(NULL AS STRING) AS mdmaddress2,
-            CAST(NULL AS STRING) AS mdmaddress3,
-            CAST(NULL AS STRING) AS mdmzipcode,
-            'São Paulo' AS mdmcity,
-            'SP' AS mdmstate,
-            '' AS mdmcountry
-        )  as mdmaddress,
+       ARRAY(
+            SELECT AS STRUCT 
+                'Residencial' AS mdmaddresstype,
+                'Rua Gov. Agemenon Magalhães, 239' AS mdmaddress1,
+                'Cristo Rei' AS mdmaddress2,
+                'Apt 601B T2' AS mdmaddress3,
+                '80050-510' AS mdmzipcode,
+                'Curitiba' AS mdmcity,
+                'PR' AS mdmstate,
+                'Brasil' AS mdmcountry,
+                '-25.437006,-49.2384131' AS mdmcoordinates
+            
+            UNION ALL
+            
+            SELECT AS STRUCT 
+                'Comercial' AS mdmaddresstype,
+                'Rua Lindolfo Pessoa, 191' AS mdmaddress1,
+                'Seminário' AS mdmaddress2,
+                'Casa' AS mdmaddress3,
+                '80240-330' AS mdmzipcode,
+                'Curitiba' AS mdmcity,
+                'PR' AS mdmstate,
+                'Brasil' AS mdmcountry,
+                '-25.449968,-49.2963161' AS mdmcoordinates
+        ) AS mdmaddress,
         '{"lat":-34.83759307861328,"lon":-7.068934440612793}' AS homeplace
         --metadata--
     FROM
