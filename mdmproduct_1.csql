@@ -17,8 +17,7 @@ WITH product AS (
                 '80050-510' AS mdmzipcode,
                 'Curitiba' AS mdmcity,
                 'PR' AS mdmstate,
-                'Brasil' AS mdmcountry,
-                '' AS mdmcoordinates
+                'Brasil' AS mdmcountry
             
             UNION ALL
             
@@ -30,8 +29,7 @@ WITH product AS (
                 '80240-330' AS mdmzipcode,
                 'Curitiba' AS mdmcity,
                 'PR' AS mdmstate,
-                'Brasil' AS mdmcountry,
-                '' AS mdmcoordinates
+                'Brasil' AS mdmcountry
         ) AS mdmaddress,
         '{"lat":-34.83759307861328,"lon":-7.068934440612793}' AS homeplace
         --metadata--
