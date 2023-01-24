@@ -13,6 +13,7 @@ WITH product AS (
                 'Default' AS mdmaddresstype,
                 'Manoel Alberto Alves' AS mdmaddress1,
                 'Rio Claro' AS mdmaddress2,
+                'Casa' AS mdmaddress3,
                 '78435000' AS mdmzipcode,
                 'São José do Rio Claro' AS mdmcity,
                 'MT' AS mdmstate,
