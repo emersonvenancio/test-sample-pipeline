@@ -11,24 +11,24 @@ WITH product AS (
        ARRAY(
             SELECT AS STRUCT 
                 'Default' AS mdmaddresstype,
-                'Manoel Alberto Alves' AS mdmaddress1,
-                'Rio Claro' AS mdmaddress2,
+                '' AS mdmaddress1,
+                'Araranguá' AS mdmaddress2,
                 'Casa' AS mdmaddress3,
-                '78435000' AS mdmzipcode,
-                'São José do Rio Claro' AS mdmcity,
-                'MT' AS mdmstate,
+                '88900000' AS mdmzipcode,
+                'Araranguá' AS mdmcity,
+                'SC' AS mdmstate,
                 'Brasil' AS mdmcountry
             
             UNION ALL
             
             SELECT AS STRUCT 
                 'Default' AS mdmaddresstype,
-                'Redentora' AS mdmaddress1,
+                'Turvo' AS mdmaddress1,
                 'Centro' AS mdmaddress2,
                 'Casa' AS mdmaddress3,
-                '78640970' AS mdmzipcode,
-                'Canarana' AS mdmcity,
-                'MT' AS mdmstate,
+                '88930000' AS mdmzipcode,
+                'Turvo' AS mdmcity,
+                'SC' AS mdmstate,
                 'Brasil' AS mdmcountry
         ) AS mdmaddress,
         '{"lat":-34.83759307861328,"lon":-7.068934440612793}' AS homeplace
