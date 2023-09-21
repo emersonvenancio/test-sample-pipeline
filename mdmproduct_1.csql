@@ -35,7 +35,7 @@ WITH product AS (
         --metadata--
     FROM
         stg_nlp_product as stg
-        CROSS JOIN UNNEST(variations) AS variations
+        LEFT JOIN UNNEST(variations) AS variations
     WHERE
         1 = 1
         --timestamp-- OR mdmCounterForEntity > {{start_from}}
