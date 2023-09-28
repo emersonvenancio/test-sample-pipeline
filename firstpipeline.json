@@ -45,7 +45,7 @@
       }
     },
      {
-      "pipelineName": "product_1",
+      "pipelineName": "product_2",
       "pipelineDescription": "Pipeline for the product table, that uses staging nlp_product",
       "outputDataModelName": "mdmproduct",
       "overlapDeltaMinutes": 30,
