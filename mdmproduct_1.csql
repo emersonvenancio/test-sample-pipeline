@@ -32,7 +32,7 @@ WITH product AS (
                 'Brasil' AS mdmcountry
         ) AS mdmaddress,
         '{"lat":-34.83759307861328,"lon":-7.068934440612793}' AS homeplace
-        --metadata--
+        --metadata-v2--
     FROM
         stg_nlp_product as stg
         LEFT JOIN UNNEST(variations) AS variations
