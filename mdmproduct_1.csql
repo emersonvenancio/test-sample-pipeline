@@ -37,7 +37,7 @@ WITH product AS (
         stg_nlp_product as stg
         LEFT JOIN UNNEST(variations) AS variations
     WHERE
-        1 = 0
+        1 = 1
         --timestamp-- OR mdmCounterForEntity > {{start_from}}
 )
 
@@ -50,4 +50,4 @@ SELECT
         OR (LENGTH(TRIM(mdmcategoryname)) = 0)
     ) AS mdmDeleted
 FROM
-    product
+    product WHERE 1 = 0
