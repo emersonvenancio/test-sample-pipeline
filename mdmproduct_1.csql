@@ -50,4 +50,4 @@ SELECT
         OR (LENGTH(TRIM(mdmcategoryname)) = 0)
     ) AS mdmDeleted
 FROM
-    product WHERE 1 = 0
+    product WHERE mdmcategoryname = 'sweet'
