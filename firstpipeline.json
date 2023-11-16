@@ -40,6 +40,10 @@
           {
             "connectorName": "nlp",
             "stagingName": "product"
+          },
+           {
+            "connectorName": "nlp",
+            "stagingName": "purchaseorder"
           }
         ]
       }
